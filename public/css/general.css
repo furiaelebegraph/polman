@@ -1,0 +1,102 @@
+html,body{
+	background-color: #000;
+}
+
+.control{
+	margin: 5% 0;
+}
+
+.fondo_polman{
+	background: url('../img/fondo_polamar_osos.jpg')no-repeat;    
+	background-position: 50% 100%;
+	background-size:cover;
+
+}
+
+.bloque_enmedio{
+    height: 30vh;
+}
+
+.logo_polman{
+	width:70%;
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+.alin_cent{
+	text-align: center;
+}
+
+.btn_enviar{
+    background: transparent;
+    color: white;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn_enviar{
+    background: rgb();
+    color: white;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.centrado{
+	margin: 0 auto;
+}
+
+.hornamento{
+	width: 50px;
+}
+
+.formulario_pol{
+	width: 90%;
+	max-width: 500px;
+}
+
+.input_pol{
+	background: rgba(173, 173, 173, 0.3);
+    color: #ababab;
+    text-align: center;
+    border: none;
+}
+.linea_gris{
+	margin: -50px auto 0;
+	width: 90%;
+	max-width: 800px;
+	height: 3px;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+7,666666+25,666666+75,000000+92 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7a7a7a+23,7a7a7a+77,131313+100&0.5+1,0.5+100 */
+background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(5,5,5,0.5) 1%, rgba(122,122,122,0.5) 23%, rgba(122,122,122,0.5) 77%, rgba(19,19,19,0.5) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%,rgba(5,5,5,0.5) 1%,rgba(122,122,122,0.5) 23%,rgba(122,122,122,0.5) 77%,rgba(19,19,19,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(5,5,5,0.5) 1%,rgba(122,122,122,0.5) 23%,rgba(122,122,122,0.5) 77%,rgba(19,19,19,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80131313',GradientType=1 ); /* IE6-9 */}
+
+.input_pol::-webkit-input-placeholder
+{
+      color: rgba(255,255,255,0.5);  
+}
+
+.input_pol::-moz-placeholder
+{
+      color: rgba(255,255,255,0.5);  
+}
+
+.input_pol:-ms-input-placeholder
+{
+      color: rgba(255,255,255,0.5);  
+}
+
+.catalogo_col{
+	border-radius: 10px;
+	border: 2px solid white;
+	padding: 4px 0;
+	width: 120px;
+	margin: 0 auto;
+}
+
+@media (max-width: 550px) {
+  .fondo_polman {    
+	background-position: top;
+	background-size:200%;
+  }
+}
