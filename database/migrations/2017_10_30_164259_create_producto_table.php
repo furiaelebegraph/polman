@@ -18,7 +18,7 @@ class CreateProductoTable extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->integer('cate_id');
-            $table->integer('sub_cate_id');
+            $table->integer('subcate_id');
             $table->string('imagen');
             $table->string('orden');
             $table->enum('activo', ['si', 'no'])->default('si');

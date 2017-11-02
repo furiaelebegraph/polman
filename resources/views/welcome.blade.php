@@ -50,16 +50,25 @@
                         </div>
 
                         <div class="control">
-                            <textarea class="textarea input_pol" name='mensaje' id="exampleTextarea" rows="3" placeholder="Escriba su mensaje"></textarea>
-                            @if ($errors->has('mensaje')) <p class="help-block">{{ $errors->first('mensaje') }}</p> @endif
+                            <textarea class="textarea input_pol" name='contenido' id="exampleTextarea" rows="3" placeholder="Escriba su mensaje"></textarea>
+                            @if ($errors->has('contenido')) <p class="help-block">{{ $errors->first('contenido') }}</p> @endif
                         </div>
 
                         <div class="control alin_cent ">
-                            <button type="submit" class=" btn_submit btn_enviar">Submit</button>
+                            <button type="submit" class=" btn_submit btn_enviar">ENVIAR MENSAJE</button>
                         </div>
 
                     </form>
                 </div>
+            </div>
+        </div>
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                @if (session('message'))
+                    <div>
+                        {{ session('message') }}
+                    </div>
+                @endif
             </div>
         </div>
 
@@ -69,10 +78,46 @@
             </div>
         </div>
 
-        <div class="columns">
-            <div class="column alin_cent">
-                <div class="catalogo_col">
-                    CATALOGO
+        <div class="columns fondo_light">
+            <div class="column">
+                <div class="columns">
+                    <div class="column alin_cent">
+                        <div class="catalogo_col">
+                            CATÁLOGO
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-three-quarters">
+                        <div class="columns is-multiline is-centered">
+                            @foreach($productos as $producto)
+                            <a class='column is-4 margen_30' href="detalle/{{$producto->id}}">
+                                <div class="has-text-centered">
+                                    <img src="{{$producto->imagen}}" alt="" class="al_70 recuadro">
+                                    <div class="linea_gris_cat"></div>
+                                    <h3 class='titulo_catalogo'>{{$producto->nombre}}</h3>
+                                </div>
+                            </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+
+        <div class="container margen_30">
+            <div class="columns is-centered">
+                <div class="column is-5 alin_cent">
+                    <img class='al_70' src="{{asset('img/osa_mayor.png')}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-5 has-text-centered">
+                    <hr>
+                    <img class='logo_footer' src="{{asset('img/logo_polman_blanco.png')}}" alt="">
                 </div>
             </div>
         </div>

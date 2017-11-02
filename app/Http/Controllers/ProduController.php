@@ -9,7 +9,7 @@ use App\SubCate;
 use App\Cate;
 use App\Ima;
 
-class ProdController extends Controller
+class ProduController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -51,7 +51,7 @@ class ProdController extends Controller
                 $imagen = $request->file('imagen');
                 $filename = time().'.'.$imagen->getClientOriginalExtension();
                 $path = 'img/producto/'.$filename;
-                Image::make($imagen)->resize(null, 400, function ($constraint) {
+                Image::make($imagen)->resize(null, 800, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save($path);
@@ -69,7 +69,7 @@ class ProdController extends Controller
                         $nombre = $producto->nombre.'_'.$indexPhoto.'_'.$photo->hashName();
                         $path = 'img/imagenes/'.$nombre;
                         $imagenes = new Ima();
-                        Image::make($photo)->resize(null, 400, function ($constraint) {
+                        Image::make($photo)->resize(null, 800, function ($constraint) {
                             $constraint->aspectRatio();
                             $constraint->upsize();
                         })->save($path);
@@ -166,5 +166,10 @@ class ProdController extends Controller
     {
             $imas = Ima::obtenerImagenes($id);
             return response()->json($imas);
+    }
+
+    public function detalle($id, Request $request){
+        $producto = Produ::with('Ima')->findOrfail($id);
+        return view('producto.detalle', compact('producto'));
     }
 }

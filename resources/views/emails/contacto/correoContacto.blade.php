@@ -4,7 +4,7 @@
 @component('mail::panel')
 	{{$data['nombre']}}<br>
 	{{$data['correo']}}<br>
-	{{$data['mensaje']}}
+	{{$data['contenido']}}
 @endcomponent
 
 Gracias,<br>

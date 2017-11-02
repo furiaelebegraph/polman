@@ -52,7 +52,9 @@
                                 <tbody>
                                     @foreach($productos as $producto) 
                                     <tr>
-                                        <td>{!!$producto->nombre!!}</td>
+                                        <td> 
+                                            {{$producto->nombre}}
+                                        </td>
                                         <td>
                                             {{$producto->cate->nombre}}
                                         </td>

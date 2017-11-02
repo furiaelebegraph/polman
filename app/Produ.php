@@ -10,10 +10,10 @@ class Produ extends Model
     	return $this->hasMany(Ima::class);
     }
     function cate(){
-    	return $this->belongsTo(Cate::class);
+    	return $this->belongsTo(Cate::class, 'cate_id');
     }
     function subcate(){
-    	return $this->belongsTo(SubCate::class, 'sub_cate_id');
+    	return $this->belongsTo(SubCate::class, 'subcate_id');
     }
     public static function obtenerProductos($id){
         return Produ::where('sub_cate_id', '=', $id)->select('nombre','id', 'imagen')->get();

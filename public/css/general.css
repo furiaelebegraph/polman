@@ -9,7 +9,7 @@ html,body{
 .fondo_polman{
 	background: url('../img/fondo_polamar_osos.jpg')no-repeat;    
 	background-position: 50% 100%;
-	background-size:cover;
+	background-size:auto;
 
 }
 
@@ -38,7 +38,13 @@ html,body{
     background: rgb();
     color: white;
     border: 0;
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
+}
+
+.recuadro{
+    border: 1px solid #dbdbdb;
+    padding: 7px;
 }
 
 .centrado{
@@ -88,10 +94,93 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', e
 
 .catalogo_col{
 	border-radius: 10px;
-	border: 2px solid white;
+	border: 1px solid #989898;
 	padding: 4px 0;
 	width: 120px;
 	margin: 0 auto;
+}
+.breadcrumb{
+	border-bottom: 1px solid #313131;
+	background: transparent;
+}
+
+.breadcrumb a{
+    color: whitesmoke;
+}
+
+.breadcrumb li.is-active a{
+	color: #9a9a9a;
+}
+
+.logo_nav{
+	width: 60px;
+	height: 40px;
+}
+
+.lg-thumb.lg-group{
+	margin:0 auto;
+}
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+    border-color: #525252;
+}
+
+.titulo{
+	font-size: 24px;
+	color: white;
+}
+
+.titulo_catalogo{
+	font-size: 17px;
+    color: darkgrey;
+}
+
+.margen_30{
+    margin: 30px auto;
+}
+
+.margen_50{
+	margin:50px auto;
+}
+
+.al_70{
+	width: 70%;
+}
+
+.al_50{
+	width: 50%;
+}
+
+.linea_gris_cat{    
+	width: 70%;
+    height: 1px;
+    background-color: #dbdbdb;
+    margin: 10px auto;
+}
+
+.borde_abajo{
+    border-bottom: 1px solid #313131;
+}
+
+.color_gris{
+	color: #bfbfbf;
+}
+
+.fondo_light{
+	background-color: white;
+}
+
+hr{
+	background-color: #313131;
+}
+
+.al_100{
+	width: 100%;
+}
+
+
+.logo_footer{
+	width: 100px;
 }
 
 @media (max-width: 550px) {

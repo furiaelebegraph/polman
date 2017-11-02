@@ -6,7 +6,7 @@ use App\SubCate;
 use App\Produ;
 use Illuminate\Support\ServiceProvider;
 
-class AdminComposerProvider extends ServiceProvider
+class AdminisComposerProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

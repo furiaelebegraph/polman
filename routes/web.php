@@ -11,8 +11,7 @@
 |
 */
 
-
-Route::get('/', 'WelcomeController@welcome');
+Route::get('/', 'WelcomeController@welcome')->name('inicio');
 
 Route::group(['prefix' => 'adminis'], function(){
 	Auth::routes();
@@ -50,17 +49,19 @@ Route::group(['middleware'=> 'auth'],function(){
 
 Route::post('enviar_correo', 'WelcomeController@enviarCorreo');
 
-Route::get('/ajaxSucate/{id}', 'produController@ajaxSucate');
+Route::get('/ajaxSucate/{id}', 'ProduController@ajaxSucate');
 
-Route::get('/ajaxProdu/{id}', 'produController@ajaxProdu');
+Route::get('/ajaxProdu/{id}', 'ProduController@ajaxProdu');
 
-Route::get('/ajaxIma/{id}', 'produController@ajaxIma');
+Route::get('/ajaxIma/{id}', 'ProduController@ajaxIma');
 
-Route::get('producto/{id}', 'produController@show');
+Route::get('producto/{id}', 'ProduController@show');
 
 Route::get('subcategoria/{id}', 'subCateController@show');
 
-Route::get('categoria/{id}', 'cateController@show');
+Route::get('categoria/{id}', 'CateController@show');
+
+Route::get('detalle/{id}', 'ProduController@detalle')->name('producto.detalle');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
